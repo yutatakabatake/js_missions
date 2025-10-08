@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>東京の明日の天気</title>
+</head>
+
+<body>
+    <h1>東京の明日の天気</h1>
+    <div id="tokyoWeather">ここに表示</div>
+
+    <script>
+        const show = document.getElementById('tokyoWeather');
+        const url = 'https://weather.tsukumijima.net/api/forecast/city/340010'
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const tomorrow = data.forecasts[1];
+                const weather = tomorrow.telop;
+                const maxTemp = tomorrow.temperature.max.celsius;
+                const minTemp = tomorrow.temperature.min.celsius;
+                const message = `${weather}（最高気温: ${maxTemp} / 最低気温: ${minTemp}）`;
+                show.innerText = message;
+            });
+
+    </script>
+</body>
+
+</html>
