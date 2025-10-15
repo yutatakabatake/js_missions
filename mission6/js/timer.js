@@ -28,7 +28,15 @@ function displayStatus() {
         status.id = 'status';
         countDown.parentNode.insertBefore(status, countDown.nextSibling);
     }
-    status.textContent = isFocus ? '作業中' : '休憩中';
+    if (isFocus) {
+        status.textContent = '作業中';
+        status.classList.remove('break');
+        status.classList.add('work');
+    } else {
+        status.textContent = '休憩中';
+        status.classList.remove('work');
+        status.classList.add('break');
+    }
 }
 
 // タイマー更新

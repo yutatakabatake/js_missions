@@ -28,6 +28,19 @@ h1 {
     font-size: 1.2rem;
     margin-bottom: 24px;
     color: #4caf50;
+    transition: color 0.3s;
+}
+
+/* 作業中の時 */
+#status.work {
+    color: #4caf50;
+    /* 緑 */
+}
+
+/* 休憩中の時 */
+#status.break {
+    color: #ff9800;
+    /* オレンジ */
 }
 
 button,
