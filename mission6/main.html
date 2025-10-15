@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シンプルポモドーロタイマー</title>
+</head>
+
+<body>
+    <div class="countDown"></div>
+    <button id="toggle">開始</button>
+    <button id="reset">リセット</button>
+    <div id="status"></div>
+
+    <!-- マイセット登録フォーム -->
+    <form id="myset-form">
+        <input type="text" name="focus" placeholder="作業分(例:25)">
+        <input type="text" name="break" placeholder="休憩分(例:5)">
+        <input type="submit" value="マイセット登録">
+    </form>
+
+    <!-- マイセット一覧表示・呼び出し -->
+    <p>マイセット</p>
+    <div id="myset-list"></div>
+
+    <script src="js/timer.js"></script>
+</body>
+
+</html>
