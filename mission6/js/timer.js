@@ -108,7 +108,6 @@ function setMylist() {
     if (breakTime.value) {
         setCookie('breakTime', breakTime.value);
     }
-    this.reset();
     showCookie();
 }
 
